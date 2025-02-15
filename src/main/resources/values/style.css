@@ -1,0 +1,149 @@
+#btnlogin  {
+
+    -fx-background-color: #0078d7;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 150px;
+    -fx-background-radius: 150px;
+
+     -fx-effect: dropshadow(three-pass-box, rgba(50, 50, 50, 0.5), 15, 0.1, 3, 4);
+}
+
+.text-field {
+    -fx-background-color: #f4f4f4; /* Light gray background */
+    -fx-border-color: #d1d1d1; /* Subtle border color */
+    -fx-border-radius: 4px; /* Rounded corners */
+    -fx-border-width: 1px; /* Thin border */
+    -fx-padding: 4px 13px; /* Padding inside the TextField */
+    -fx-font-size: 16px; /* Font size */
+
+    -fx-text-fill: #333333; /* Dark text color */
+    -fx-background-insets: 0, 1; /* Subtle inset background */
+}
+
+/* TextField when focused */
+.text-field:focused {
+    -fx-background-color: #ffffff; /* White background when focused */
+    -fx-border-color: #67C6E3; /* Green border color when focused */
+    -fx-border-width: 2px; /* Thicker border when focused */
+    -fx-text-fill: #4CAF50; /* Text color changes to green */
+}
+
+
+
+
+/* Style for the text field when the input is invalid */
+.text-field:focused:invalid {
+    -fx-border-color: #F44336; /* Red border color for invalid input */
+    -fx-text-fill: #F44336; /* Red text color for invalid input */
+}
+
+
+
+
+
+
+
+
+.rectangle {
+  -fx-fill: white; /* Rectangle fill color */
+     -fx-stroke: #69afe4; /* Border color */
+     -fx-stroke-width: 1; /* Border width */
+    -fx-arc-width: 20; /* Horizontal corner radius */
+    -fx-arc-height: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(50, 50, 50, 0.6), 18, 0, 3, 5);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.date-picker {
+    -fx-background-color: #f9f9f9; /* Light gray background */
+    -fx-border-color: #cccccc; /* Light gray border */
+    -fx-border-radius: 5; /* Rounded corners */
+    -fx-background-radius: 5;
+    -fx-padding: 6 12; /* Inner padding for the DatePicker */
+    -fx-font-size: 14px; /* Font size for the date text */
+    -fx-text-fill: #333333; /* Dark gray text */
+}
+
+
+
+
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #d1d1d1;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+.table-row-cell:even {
+    -fx-background-color: white;
+}
+.table-row-cell:selected {
+    -fx-background-color: #0078d7;
+    -fx-text-fill: white;
+}
+
+
+
+
+
+ /////////////////////// dialog box/////////////////////////
+
+.dialog-pane {
+    -fx-background-color: #f4f4f9; /* Light gray background */
+    -fx-pref-width: 300px;
+    -fx-pref-: 300px; /* Set a preferred width */
+}
+
+
+/* Style the content of the dialog */
+.dialog-pane .content {
+    -fx-font-size: 13px;
+    -fx-text-fill: #666666; /* Lighter gray text */
+    -fx-padding: 10px 0;
+}
+
+
+.dialog-pane .button:default {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
+    -fx-pref-width: 80px;
+    -fx-pref-height: 30px;
+    -fx-background-color: #68d391; /* Light green background */
+
+
+}
+
+/* Style the Cancel button */
+.dialog-pane .button:cancel {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
+    -fx-pref-width: 80px;
+    -fx-pref-height: 30px;
+    -fx-background-color: #ff6347; /* Light red background */
+
+
+}
+
+////////////////////////////////
+

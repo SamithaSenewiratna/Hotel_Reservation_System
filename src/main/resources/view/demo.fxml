@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="551.0" minWidth="810.0" prefHeight="551.0" prefWidth="810.0" style="-fx-background-color: #EEEEEE;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.UsersController">
+   <children>
+      <Label layoutX="36.0" layoutY="26.0" styleClass="dashboard-heading-font" text="Reservations">
+         <font>
+            <Font name="Verdana Bold" size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearch" layoutX="344.0" layoutY="31.0" prefHeight="18.0" prefWidth="412.0" promptText="Search Reservation..." style="-fx-background-radius: 25; -fx-background-color: white; -fx-border-color: #EEEEEE;" stylesheets="@../values/style.css">
+         <padding>
+            <Insets left="50.0" />
+         </padding>
+      </TextField>
+      <TableView fx:id="tblReservations" layoutX="24.0" layoutY="87.0" prefHeight="431.0" prefWidth="477.0" style="-fx-background-radius: 10;" styleClass="table-row-cell" stylesheets="@../values/style.css">
+         <columns>
+            <TableColumn fx:id="colID" prefWidth="56.799983978271484" style="-fx-background-color: #989898; -fx-background-radius: 30;" text="ID" />
+            <TableColumn fx:id="colCustomerName" prefWidth="132.0" style="-fx-background-color: #989898; -fx-background-radius: 30;" text="Name" />
+            <TableColumn fx:id="colDate" prefWidth="96.0" style="-fx-background-radius: 30; -fx-background-color: #989898;" text="Date" />
+            <TableColumn fx:id="colTime" prefWidth="84.0" style="-fx-background-radius: 30; -fx-background-color: #989898;" text="Time" />
+            <TableColumn fx:id="colGuest" minWidth="0.0" prefWidth="96.0" style="-fx-background-radius: 30; -fx-background-color: #989898;" text="Guests" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="516.0" layoutY="87.0" prefHeight="431.0" prefWidth="279.0" style="-fx-background-color: #ffffff; -fx-border-color: #989898; -fx-background-radius: 5; -fx-border-radius: 5;" styleClass="button" stylesheets="@../values/style.css">
+         <children>
+            <Label layoutX="10.0" layoutY="10.0" text="Reservation Details" textFill="#0000008e">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCustomerName" layoutX="21.0" layoutY="49.0" prefHeight="26.0" prefWidth="239.0" promptText="Customer Name" />
+            <TextField fx:id="txtDate" layoutX="21.0" layoutY="95.0" prefHeight="20.0" prefWidth="239.0" promptText="Date (YYYY-MM-DD)" />
+            <TextField fx:id="txtTime" layoutX="22.0" layoutY="142.0" prefHeight="20.0" prefWidth="239.0" promptText="Time (HH:MM AM/PM)" />
+            <TextField fx:id="numberofGuest" layoutX="22.0" layoutY="192.0" prefHeight="20.0" prefWidth="239.0" promptText="Number of Guests" />
+            <JFXButton layoutX="22.0" layoutY="348.0" onAction="#addReservationOnAction" prefHeight="29.0" prefWidth="239.0" style="-fx-background-color: #308EDF; -fx-border-radius: 20;" text="Add Reservation" textFill="WHITE" />
+            <JFXButton layoutX="22.0" layoutY="387.0" onAction="#updateOnAction" prefHeight="29.0" prefWidth="114.0" style="-fx-background-color: #989898; -fx-border-radius: 20;" text="Update" textFill="WHITE" />
+            <JFXButton layoutX="146.0" layoutY="387.0" onAction="#deleteOnAction" prefHeight="29.0" prefWidth="114.0" style="-fx-background-color: #F44336; -fx-border-radius: 20;" text="Delete" textFill="WHITE" />
+            <TextField fx:id="numberofGuest1" layoutX="23.0" layoutY="238.0" prefHeight="20.0" prefWidth="239.0" promptText="Total" />
+            <DatePicker layoutX="25.0" layoutY="286.0" prefHeight="48.0" prefWidth="50.0" />
+            <DatePicker layoutX="143.0" layoutY="285.0" prefHeight="48.0" prefWidth="50.0" />
+            <Label layoutX="90.0" layoutY="302.0" text="Check-in" />
+            <Label layoutX="202.0" layoutY="303.0" text="Check-Out" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

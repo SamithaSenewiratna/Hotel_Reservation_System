@@ -1,0 +1,32 @@
+package service;
+
+import service.custom.impl.CustomerServiceImpl;
+import util.ServiceType;
+
+public class serviceFactory {
+    private static serviceFactory instance;
+
+    private serviceFactory(){}
+
+    public static serviceFactory getInstance(){return instance==null?instance=new serviceFactory():instance;}
+
+    public <T extends superService > T getServiceType(ServiceType servicetype) {
+
+        switch (servicetype){
+
+            case CUSTOMER :return (T) new CustomerServiceImpl();
+
+           /* case RESERVATION:return (T) new ReservatonServiceImpl();
+            case ROOM:return (T) new RoomServiceImpl();
+            case USER:return (T)new UserServiceImpl();
+            case ACTIVITY_LOGS:return (T) new ActivityLogServiceImpl();
+            */
+
+        }
+        return null;
+
+    }
+
+
+
+}

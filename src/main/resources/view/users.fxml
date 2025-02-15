@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="551.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UsersFormController">
+   <children>
+      <ScrollPane fx:id="userScrollPane" layoutX="14.0" layoutY="108.0" prefHeight="438.0" prefWidth="540.0">
+         <content>
+            <GridPane fx:id="userGrid" prefHeight="190.0" prefWidth="176.0">
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <AnchorPane layoutX="562.0" layoutY="-20.0" prefHeight="606.0" prefWidth="246.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="13.0" layoutY="46.0" text="User Details">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtName" layoutX="24.0" layoutY="288.0" prefHeight="29.0" prefWidth="200.0" promptText="Name" />
+            <TextField fx:id="txtEmail" layoutX="24.0" layoutY="335.0" prefHeight="29.0" prefWidth="200.0" promptText="Email" />
+            <TextField fx:id="txtPhone" layoutX="24.0" layoutY="381.0" prefHeight="29.0" prefWidth="200.0" promptText="Phone" />
+            <PasswordField fx:id="txtPassword" layoutX="24.0" layoutY="429.0" prefHeight="29.0" prefWidth="200.0" promptText="Password" />
+            <ComboBox fx:id="cmbRole" layoutX="24.0" layoutY="477.0" prefHeight="29.0" prefWidth="200.0" promptText="Select Role" />
+            <JFXButton fx:id="btnUpdate" layoutX="102.0" layoutY="546.0" text="Update" textFill="WHITE" />
+            <ImageView fitHeight="112.0" fitWidth="140.0" layoutX="45.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/usersicon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TextField layoutX="87.0" layoutY="32.0" prefHeight="30.0" prefWidth="412.0" promptText="Search Users">
+         <padding>
+            <Insets left="50.0" />
+         </padding>
+      </TextField>
+   </children>
+</AnchorPane>

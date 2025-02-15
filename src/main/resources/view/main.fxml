@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main" prefHeight="551.0" prefWidth="914.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dashboardController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e9ecef" height="22.0" layoutX="14.0" layoutY="29.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="139.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e9ecef" height="22.0" layoutX="67.0" layoutY="43.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="39.0" />
+      <AnchorPane fx:id="AnchorPane" layoutX="160.0" prefHeight="551.0" prefWidth="810.0" style="-fx-background-color: #f5f5f5;" />
+      <GridPane layoutX="7.0" layoutY="112.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button fx:id="btnRoom" mnemonicParsing="false" onAction="#rooms" onMouseClicked="#btnRoomsOnClick" onMouseEntered="#btnRoomOnMouseEntered" onMouseExited="#btnRoomOnMouseExited" prefHeight="39.0" prefWidth="139.0" style="-fx-background-color: white;" text=" Rooms" textFill="#6e7481" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets right="43.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/rooms.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnDashboard1" mnemonicParsing="false" onAction="#btnDashboardOnAction" onMouseClicked="#btnDashboardOnClick" onMouseEntered="#btnDashboardOnMouseEntered" onMouseExited="#btnDashboardOnMouseExited" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: white;" stylesheets="@../values/style.css" text="Dashboard" textFill="#6e7481">
+               <padding>
+                  <Insets left="8.0" right="32.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/dashboard.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnReservation" mnemonicParsing="false" onAction="#Reservation" onMouseClicked="#btnReservationOnClick" onMouseEntered="#btnReservationOnMouseEntered" onMouseExited="#btnReservationOnMouseExited" prefHeight="39.0" prefWidth="139.0" style="-fx-background-color: white;" text="Reservation" textFill="#6e7481" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/reservation.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnRegister" mnemonicParsing="false" onAction="#Register" onMouseClicked="#btnRegisterOnClick" onMouseEntered="#btnRegisterOnMouseEntered" onMouseExited="#btnRegisterOnMouseExited" prefHeight="39.0" prefWidth="139.0" style="-fx-background-color: white;" text="Register" textFill="#6e7481" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets right="39.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-check-in-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnSetting" mnemonicParsing="false" onAction="#Setting" onMouseClicked="#btnSettingOnClick" onMouseEntered="#btnSettingOnMouseEntered" onMouseExited="#btnSettingOnMouseExited" prefHeight="39.0" prefWidth="139.0" style="-fx-background-color: white;" text="Setting" textFill="#6e7481" GridPane.rowIndex="7">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets right="45.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/setting.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnLogOut" mnemonicParsing="false" onAction="#LogOut" onMouseClicked="#btnLogOutOnClick" onMouseEntered="#btnLogOutOnMouseEntered" onMouseExited="#btnLogOutOnMouseExited" prefHeight="39.0" prefWidth="139.0" style="-fx-background-color: white;" text="LogOut" textFill="#6e7481" GridPane.rowIndex="8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets right="45.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnBilling" mnemonicParsing="false" onAction="#Billing" onMouseClicked="#btnBillingOnClick" onMouseEntered="#btnBillingOnMouseEntered" onMouseExited="#btnBillingOnMouseExited" prefHeight="39.0" prefWidth="139.0" style="-fx-background-color: white;" text="Billing" textFill="#6e7481" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets right="53.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-bill-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnReports" mnemonicParsing="false" onAction="#Reports" onMouseClicked="#btnReportsOnClick" onMouseEntered="#btnReportsOnMouseEntered" onMouseExited="#btnReportsOnMouseExited" prefHeight="39.0" prefWidth="139.0" style="-fx-background-color: white;" text="Reports" textFill="#6e7481" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets right="40.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/reports.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnUsers" mnemonicParsing="false" onAction="#Users" onMouseClicked="#btnUsersOnClick" onMouseEntered="#btnUsersOnMouseEntered" onMouseExited="#btnUsersOnMouseExited" prefHeight="39.0" prefWidth="139.0" style="-fx-background-color: white;" text="Users" textFill="#6e7481" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets right="50.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-users-30.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+      <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="17.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-building-100.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="59.0" layoutY="25.0" prefHeight="30.0" prefWidth="39.0" text="Hotel " textFill="#2563eb">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="89.0" layoutY="25.0" prefHeight="30.0" prefWidth="111.0" text="Reservation" textFill="#2563eb">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="40.0" prefHeight="30.0" prefWidth="111.0" text="System" textFill="#2563eb">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Label>
+   </children>
+   
+</AnchorPane>

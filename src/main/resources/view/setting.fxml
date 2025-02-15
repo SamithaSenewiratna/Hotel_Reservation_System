@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="551.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.settingController">
+   <children>
+      <Label layoutX="47.0" layoutY="31.0" text="System Settings">
+         <font>
+            <Font name="Segoe UI Bold" size="19.0" />
+         </font></Label>
+      <Label layoutX="48.0" layoutY="57.0" text="Manage your application preferences">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="113.0" layoutX="38.0" layoutY="104.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 20; -fx-arc-height: 20;" width="335.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="113.0" layoutX="39.0" layoutY="238.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 20; -fx-arc-height: 20;" width="335.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="113.0" layoutX="396.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 20; -fx-arc-height: 20;" width="335.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="113.0" layoutX="398.0" layoutY="234.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 20; -fx-arc-height: 20;" width="335.0" />
+      <Label layoutX="79.0" layoutY="112.0" text="General Settings">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="246.0" text="Reservation Settings">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="441.0" layoutY="244.0" text="System Updates">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="440.0" layoutY="113.0" text="Security Settings">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="144.0" text="System Notifications">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="165.0" text="Email Notifications">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="187.0" text="Dark Mode">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="422.0" layoutY="143.0" text="Two-Factor Authentication">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="424.0" layoutY="163.0" text="Login Notifications">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="426.0" layoutY="276.0" text="Automatic Updates">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="425.0" layoutY="296.0" text="Update Notifications">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="276.0" text="Auto Confirmation">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="296.0" text="SMS Notifications">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <JFXToggleButton layoutX="314.0" layoutY="127.0" prefHeight="41.0" prefWidth="54.0" size="7.0" text="ToggleButton" textFill="WHITE" toggleColor="#0b73d4" toggleLineColor="#b7cce7" />
+      <JFXToggleButton layoutX="313.0" layoutY="151.0" prefHeight="41.0" prefWidth="54.0" size="7.0" text="ToggleButton" textFill="WHITE" toggleColor="#0b73d4" toggleLineColor="#b7cce7" />
+      <JFXToggleButton layoutX="314.0" layoutY="175.0" prefHeight="41.0" prefWidth="54.0" size="7.0" text="ToggleButton" textFill="WHITE" toggleColor="#0b73d4" toggleLineColor="#b7cce7" />
+      <JFXToggleButton layoutX="314.0" layoutY="256.0" prefHeight="41.0" prefWidth="54.0" size="7.0" text="ToggleButton" textFill="WHITE" toggleColor="#0b73d4" toggleLineColor="#b7cce7" />
+      <JFXToggleButton layoutX="313.0" layoutY="280.0" prefHeight="41.0" prefWidth="54.0" size="7.0" text="ToggleButton" textFill="WHITE" toggleColor="#0b73d4" toggleLineColor="#b7cce7" />
+      <JFXToggleButton layoutX="677.0" layoutY="261.0" prefHeight="41.0" prefWidth="54.0" size="7.0" text="ToggleButton" textFill="WHITE" toggleColor="#0b73d4" toggleLineColor="#b7cce7" />
+      <JFXToggleButton layoutX="676.0" layoutY="285.0" prefHeight="41.0" prefWidth="54.0" size="7.0" text="ToggleButton" textFill="WHITE" toggleColor="#0b73d4" toggleLineColor="#b7cce7" />
+      <JFXToggleButton layoutX="679.0" layoutY="123.0" prefHeight="41.0" prefWidth="54.0" size="7.0" text="ToggleButton" textFill="WHITE" toggleColor="#0b73d4" toggleLineColor="#b7cce7" />
+      <JFXToggleButton layoutX="678.0" layoutY="147.0" prefHeight="41.0" prefWidth="54.0" size="7.0" text="ToggleButton" textFill="WHITE" toggleColor="#0b73d4" toggleLineColor="#b7cce7" />
+      <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="55.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-settings-64.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="57.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/reservation.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="414.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-update-96.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="24.0" layoutX="414.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-security-configuration-96.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
