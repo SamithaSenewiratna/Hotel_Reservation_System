@@ -14,7 +14,10 @@ public interface CustomerService extends superService {
     boolean saveCustomer(Customer customer) throws SQLException;
     boolean updateCustomer(Customer customer);
     boolean deleteCustomer(String customerId);
+
+
     Customer searchCustomer(String customerId);
-    ObservableList<String> getCustomerIds();
+
+
 
 }

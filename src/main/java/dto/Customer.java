@@ -13,19 +13,26 @@ public class Customer {
 
     private int CustomerID;
     private String name;
-    private String address;
+    private String email;
     private String contactDetails;
-    private int loyaltyPoints;
+    private String address;
 
 
-    public Customer( String name, String address, String contactDetails, int loyaltyPoints) {
+    public Customer( String name, String email, String contactDetails, String address) {
 
         this.name = name;
-        this.address = address;
+        this.email = email;
         this.contactDetails = contactDetails;
-        this.loyaltyPoints = loyaltyPoints;
+        this.address = address;
     }
 
 
+    public String getId() {
+        return String.valueOf(CustomerID);
+    }
 
+    public String getCustomerName() {
+
+        return name;
+    }
 }

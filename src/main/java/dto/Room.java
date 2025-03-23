@@ -4,6 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import util.Availability;
+import util.RoomType;
+import util.UserRole;
+
+import java.io.InputStream;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -13,17 +18,24 @@ public class Room {
 
     private int roomId;
     private String roomNumber;
-    private RoomType roomType;  // Enum type for roomType
+    private RoomType roomType;
     private Double price;
-    private Availability availability;  // Enum type for availability
+    private Availability availability;
+    private String imgSrc;
 
-    // Enum for Room Type
-    public enum RoomType {
-        SINGLE, DOUBLE, SUITE
+
+
+    public Room( String roomNumber, RoomType roomType, Double price, Availability availability ,String imgSrc) {
+
+        this.roomNumber = roomNumber;
+        this.roomType = roomType;
+        this.price = price;
+        this.availability = availability;
+        this.imgSrc=imgSrc;
     }
 
-    // Enum for Availability Status
-    public enum Availability {
-        AVAILABLE, OCCUPIED
-    }
+
+
+
+
 }

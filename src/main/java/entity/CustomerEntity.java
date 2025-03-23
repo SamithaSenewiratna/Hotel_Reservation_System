@@ -18,9 +18,8 @@ public class CustomerEntity {
    @Column(name ="customer_id")
     private int customerId;
     private String name;
-    private String address;
-    @Column(name = "contactDetails")
+    private String email;
     private String contactDetails;
-    private int loyaltyPoints;
+    private String address;
 
 }

@@ -13,10 +13,7 @@ public class mainController {
     public void rebun(ActionEvent actionEvent) throws IOException {
 
         Parent root = FXMLLoader.load(getClass().getResource("../view/addCustomerForm.fxml"));
-
-
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-
 
         stage.setScene(new Scene(root));
         stage.setTitle("DashBoard");

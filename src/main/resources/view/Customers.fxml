@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="551.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+   <children>
+      <Label layoutX="30.0" layoutY="34.0" styleClass="dashboard-heading-font" text="Customer Details">
+         <font>
+            <Font name="Verdana Bold" size="21.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCustomers" layoutX="22.0" layoutY="97.0" prefHeight="401.0" prefWidth="478.0" style="-fx-background-radius: 10;" styleClass="table-row-cell" stylesheets="@../values/style.css">
+         <columns>
+            <TableColumn fx:id="colID" prefWidth="40.799991607666016" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="89.60000610351562" text="Name" />
+            <TableColumn fx:id="colEmail" prefWidth="141.6000213623047" text="Email" />
+            <TableColumn fx:id="colContactDetail" minWidth="0.0" prefWidth="87.199951171875" text="Contact" />
+            <TableColumn fx:id="colAddress" prefWidth="107.20001220703125" text="Address" />
+
+
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="514.0" layoutY="97.0" prefHeight="431.0" prefWidth="279.0" style="-fx-background-color: #ffffff; -fx-border-color: #D6CFB4; -fx-background-radius: 5; -fx-border-radius: 5;" styleClass="button" stylesheets="@../values/style.css">
+         <children>
+            <Label layoutX="34.0" layoutY="10.0" text="Customer Registration" textFill="#0000008e">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCustomerName" layoutX="21.0" layoutY="138.0" prefHeight="35.0" prefWidth="147.0" promptText="Name" />
+            <TextField fx:id="txtEmail" layoutX="21.0" layoutY="184.0" prefHeight="10.0" prefWidth="239.0" promptText="Email" />
+            <TextField fx:id="txtContactDetails" layoutX="22.0" layoutY="231.0" prefHeight="20.0" prefWidth="239.0" promptText="Contact Details" />
+            <TextField fx:id="txtAddress" layoutX="22.0" layoutY="281.0" prefHeight="20.0" prefWidth="239.0" promptText="Address" />
+            <JFXButton layoutX="22.0" layoutY="336.0" onAction="#addCustomerOnAction" prefHeight="29.0" prefWidth="239.0" style="-fx-background-color: #308EDF; -fx-border-radius: 20; -fx-background-radius: 20;" text="Add Customer" textFill="WHITE" />
+            <JFXButton layoutX="22.0" layoutY="378.0" onAction="#updateOnAction" prefHeight="29.0" prefWidth="114.0" style="-fx-background-color: #989898; -fx-border-radius: 20; -fx-background-radius: 220;" text="Update" textFill="WHITE" />
+            <JFXButton layoutX="146.0" layoutY="377.0" onAction="#deleteOnAction" prefHeight="29.0" prefWidth="114.0" style="-fx-background-color: #F44336; -fx-border-radius: 20; -fx-background-radius: 20;" text="Delete" textFill="WHITE" />
+            <Label fx:id="lblID" layoutX="218.0" layoutY="144.0" prefHeight="17.0" prefWidth="21.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="189.0" layoutY="144.0" prefHeight="17.0" prefWidth="21.0" text="ID :" />
+            <ImageView fitHeight="82.0" fitWidth="106.0" layoutX="91.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-customers-96.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtSearch" layoutX="321.0" layoutY="41.0" prefHeight="18.0" prefWidth="412.0" promptText="Search Customer By Customer ID" style="-fx-background-radius: 25; -fx-background-color: white; -fx-border-color: #EEEEEE;" stylesheets="@../values/style.css">
+         <padding>
+            <Insets left="50.0" />
+         </padding>
+      </TextField>
+      <Button layoutX="752.0" layoutY="46.0" mnemonicParsing="false" onAction="#btnSearcOnAction" prefHeight="26.0" prefWidth="22.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-search-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

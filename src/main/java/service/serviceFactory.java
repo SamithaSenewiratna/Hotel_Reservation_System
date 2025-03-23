@@ -1,6 +1,6 @@
 package service;
 
-import service.custom.impl.CustomerServiceImpl;
+import service.custom.impl.*;
 import util.ServiceType;
 
 public class serviceFactory {
@@ -10,15 +10,20 @@ public class serviceFactory {
 
     public static serviceFactory getInstance(){return instance==null?instance=new serviceFactory():instance;}
 
+
+
     public <T extends superService > T getServiceType(ServiceType servicetype) {
 
         switch (servicetype){
 
             case CUSTOMER :return (T) new CustomerServiceImpl();
-
-           /* case RESERVATION:return (T) new ReservatonServiceImpl();
-            case ROOM:return (T) new RoomServiceImpl();
             case USER:return (T)new UserServiceImpl();
+            case ROOM:return (T) new RoomServiceImpl();
+            case RESERVATION:return (T) new ResevationServiceImpl();
+            case BILLING:return (T) new BillingServiceImpl();
+           /*
+
+
             case ACTIVITY_LOGS:return (T) new ActivityLogServiceImpl();
             */
 

@@ -7,7 +7,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.util.Callback;
 import service.custom.CustomerService;
 import service.serviceFactory;
 import util.ServiceType;
@@ -18,13 +17,12 @@ import java.util.ResourceBundle;
 
 
 
-public class RegisterFormController implements Initializable {
+public class CustomerFormController implements Initializable {
     public TextField txtSearch;
     public TextField txtLoyalPoint;
     public TextField txtContactDetails;
     public TextField txtAddress;
     public TextField txtCustomerName;
-
     public TableView tblCustomers;
     public TableColumn colAddress;
     public TableColumn colID;
@@ -32,6 +30,8 @@ public class RegisterFormController implements Initializable {
     public TableColumn colContactDetail;
     public TableColumn colPoint;
     public Label lblID;
+    public TextField txtEmail;
+    public TableColumn colEmail;
 
 
     private ObservableList<Customer> customerList = FXCollections.observableArrayList();
@@ -42,51 +42,14 @@ public class RegisterFormController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        // Initialize the other columns
+
         colID.setCellValueFactory(new PropertyValueFactory<>("customerID"));
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
-        colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
+        colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
         colContactDetail.setCellValueFactory(new PropertyValueFactory<>("contactDetails"));
-        colPoint.setCellValueFactory(new PropertyValueFactory<>("loyaltyPoints"));
+        colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
 
-        // Define the delete button column
-        TableColumn<Customer, Void> colDelete = new TableColumn<>("");
-
-        // Define the button cell factory
-        colDelete.setCellFactory(new Callback<TableColumn<Customer, Void>, TableCell<Customer, Void>>() {
-            @Override
-            public TableCell<Customer, Void> call(TableColumn<Customer, Void> param) {
-                return new TableCell<Customer, Void>() {
-                    private final Button btnDelete = new Button("Delete");
-
-                    {
-                        btnDelete.setStyle("-fx-background-color: red; -fx-text-fill: white;");
-                        btnDelete.setOnAction(event -> {
-                            Customer customer = getTableView().getItems().get(getIndex()); // Get the customer from the current row
-                            deleteCustomer(customer); // Call your delete method with the customer
-                        });
-                    }
-
-                    @Override
-                    public void updateItem(Void item, boolean empty) {
-                        super.updateItem(item, empty);
-                        if (empty) {
-                            setGraphic(null); // Remove button if the row is empty
-                        } else {
-                            setGraphic(btnDelete); // Show button
-                        }
-                    }
-                };
-            }
-        });
-
-        // Add the delete column to the TableView
-        tblCustomers.getColumns().add(colDelete);
-
-        loadTable(); // Load table data
-
-
-
+        loadTable();
 
         tblCustomers.getSelectionModel().selectedItemProperty().addListener(((observableValue, oldValue, newValue) -> {
             setTextValues((Customer) newValue);}));
@@ -94,35 +57,25 @@ public class RegisterFormController implements Initializable {
     }
 
 
-
     private void deleteCustomer(Customer customer) {
-        // Your code to delete the customer
+
         boolean isDeleted = service.deleteCustomer(String.valueOf(customer.getCustomerID()));
         if (isDeleted) {
-            loadTable(); // Reload the table after deletion
+            loadTable();
         } else {
             new Alert(Alert.AlertType.ERROR, "Error deleting customer").show();
         }
     }
 
 
-
-
-
-
-
-
-        private void setTextValues(Customer newValue) {
+    private void setTextValues(Customer newValue) {
+        if(newValue==null)return;
             lblID.setText(String.valueOf(newValue.getCustomerID()));
             txtCustomerName.setText(newValue.getName());
-            txtAddress.setText(newValue.getAddress());
+            txtEmail.setText(newValue.getEmail());
             txtContactDetails.setText(newValue.getContactDetails());
-            txtLoyalPoint.setText(String.valueOf(newValue.getLoyaltyPoints()));
-
+            txtAddress.setText(newValue.getAddress());
         }
-
-
-
 
 
     public void addCustomerOnAction(ActionEvent actionEvent) throws SQLException {
@@ -131,16 +84,15 @@ public class RegisterFormController implements Initializable {
         Customer customer = new Customer(
 
                 txtCustomerName.getText(),
-                txtAddress.getText(),
+                txtEmail.getText(),
                 txtContactDetails.getText(),
-                Integer.parseInt(txtLoyalPoint.getText())
+                txtAddress.getText()
 
         );
 
         if(customerService.saveCustomer(customer)){
-
-             loadTable();
             clearFields();
+            loadTable();
 
 
         }else {
@@ -151,22 +103,21 @@ public class RegisterFormController implements Initializable {
     public void updateOnAction(ActionEvent actionEvent) {
         CustomerService customerService = serviceFactory.getInstance().getServiceType(ServiceType.CUSTOMER);
 
-        // Get the customer ID from lblID
-        int customerId = Integer.parseInt(lblID.getText()); // Make sure lblID is populated
+        int customerId = Integer.parseInt(lblID.getText());
 
-        // Create the updated customer object with the customer ID
         Customer customer = new Customer(
                 customerId,  // Include the customer ID
                 txtCustomerName.getText(),
-                txtAddress.getText(),
+                txtEmail.getText(),
                 txtContactDetails.getText(),
-                Integer.parseInt(txtLoyalPoint.getText())
+                txtAddress.getText()
+
         );
 
         if (customerService.updateCustomer(customer)) {
-
-            loadTable();
             clearFields();
+            loadTable();
+
         } else {
 
         }
@@ -175,46 +126,50 @@ public class RegisterFormController implements Initializable {
 
     public void deleteOnAction(ActionEvent actionEvent) {
         if(service.deleteCustomer(lblID.getText())){
+            clearFields();
             loadTable();
-
 
         }
 
     }
 
-
-
-
-
-
-
     private void clearFields() {
-        txtCustomerName.clear();
-        txtAddress.clear();
-        txtContactDetails.clear();
-        txtLoyalPoint.clear();
+            txtCustomerName.clear();
+            txtAddress.clear();
+            txtContactDetails.clear();
+            txtEmail.clear();
     }
 
     private void showAlert(String title, String message, Alert.AlertType type) {
-        Alert alert = new Alert(type);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
+            Alert alert = new Alert(type);
+            alert.setTitle(title);
+            alert.setHeaderText(null);
+            alert.setContentText(message);
+            alert.showAndWait();
     }
 
     private void loadTable() {
-        List<Customer> all = service.getAll();
-        ObservableList<Customer> customerObservableList = FXCollections.observableArrayList();
-        all.forEach(customer -> {
-            customerObservableList.add(customer);
-        });
-        tblCustomers.setItems(customerObservableList);
+            List<Customer> all = service.getAll();
+            ObservableList<Customer> customerObservableList = FXCollections.observableArrayList();
+            all.forEach(customer -> {
+                customerObservableList.add(customer);
+            });
+            tblCustomers.setItems(customerObservableList);
     }
 
 
-
-
+    public void btnSearcOnAction(ActionEvent actionEvent) {
+        String customerId = txtSearch.getText();
+        Customer customer = service.searchCustomer(customerId);
+        if (customer != null) {
+            txtCustomerName.setText(customer.getName());
+            txtEmail.setText(customer.getEmail());
+            txtContactDetails.setText(customer.getContactDetails());
+            txtLoyalPoint.setText(customer.getAddress());
+        } else {
+            new Alert(Alert.AlertType.WARNING, "Customer not found").show();
+        }
+    }
 }
 
 
