@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="551.0" prefWidth="914.0" stylesheets="@../../../main/resources/values/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.otpController">
+    <children>
+        <ImageView fitHeight="551.0" fitWidth="914.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" styleClass="label">
+            <image>
+                <Image url="@../img/background%20img.png" />
+            </image>
+        </ImageView>
+        <AnchorPane fx:id="anchorPane2" layoutX="510.0" layoutY="63.0" prefHeight="439.0" prefWidth="381.0">
+            <children>
+                <Rectangle id="rectangele" arcHeight="5.0" fill="WHITE" height="370.0" layoutX="8.0" layoutY="19.0" style="-fx-arc-width: 20; -fx-arc-height: 20; -fx-effect: dropshadow(three-pass-box, rgba(50, 50, 50, 0.6), 18, 0, 3, 5);" styleClass="rectangle" width="333.0" />
+            <TextField fx:id="txtEmails" layoutX="41.0" layoutY="102.0" prefHeight="35.0" prefWidth="262.0" style="-fx-background-color: white;" styleClass="arrow-button" stylesheets="@../values/style.css" />
+                <Label layoutX="45.0" layoutY="141.0" prefHeight="131.0" prefWidth="262.0" style="-fx-background-color: white;" text="The Forgot Password feature with OTP (One-Time Password) helps users securely reset their passwords. This process involves generating a unique OTP, sending it via email (e.g., using Gmail), and verifying the entered OTP before allowing a password reset." textFill="#0000006f" wrapText="true">
+                    <font>
+                        <Font name="Poppins Regular" size="11.0" />
+                    </font></Label>
+                <Button fx:id="btnlogin" layoutX="42.0" layoutY="288.0" mnemonicParsing="false" onAction="#sendOtpOnAction" prefHeight="36.0" prefWidth="261.0" stylesheets="@../values/style.css" text="Send OTP" textFill="#f2f0f0">
+                    <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Label layoutX="53.0" layoutY="93.0" prefHeight="18.0" prefWidth="112.0" style="-fx-background-color: white;" text="Enter Your Email ">
+                    <font>
+                        <Font name="Poppins Regular" size="12.0" />
+                    </font>
+                </Label>
+            <Label layoutX="100.0" layoutY="40.0" prefHeight="30.0" prefWidth="143.0" text="OTP Verification" textFill="#3a8ad6a3">
+               <font>
+                  <Font name="Poppins Regular" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="153.0" layoutY="335.0" onMouseClicked="#btnBackOnActions" prefHeight="30.0" prefWidth="39.0" text="Back" textFill="#000000a8">
+               <font>
+                  <Font name="Poppins Regular" size="13.0" />
+               </font>
+            </Label>
+            </children></AnchorPane>
+    </children>
+</AnchorPane>
