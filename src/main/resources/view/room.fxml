@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="551.0" prefWidth="810.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.roomController">
+    <children>
+        <Label layoutX="19.0" layoutY="12.0" text="Available Rooms">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="94.0" layoutX="15.0" layoutY="51.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 20; -fx-arc-height: 20;" width="181.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="94.0" layoutX="211.0" layoutY="51.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 20; -fx-effect: 20; -fx-arc-height: 20;" width="181.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="94.0" layoutX="405.0" layoutY="52.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 20; -fx-arc-height: 20;" width="181.0" />
+        <Label layoutX="28.0" layoutY="63.0" text="Deluxe King Room">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="228.0" layoutY="63.0" text="City View ">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="420.0" layoutY="62.0" text="Nature View Suite">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Button layoutX="625.0" layoutY="21.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="93.0" style="-fx-background-color: blue;" text="+Add Room" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <Button layoutX="727.0" layoutY="21.0" mnemonicParsing="false" style="-fx-background-color: white; -fx-border-color: blue; -fx-border-radius: 3;" text="Filter">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <Label layoutX="29.0" layoutY="123.0" text="\$4.6/night" textFill="#57aaea">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="229.0" layoutY="118.0" text="\$9.46/night" textFill="#57aaea">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="421.0" layoutY="118.0" text="\$10.81/night" textFill="#57aaea">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="18.0" fitWidth="14.0" layoutX="30.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/bedicon.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="14.0" fitWidth="22.0" layoutX="108.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/usersicon.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="22.0" fitWidth="24.0" layoutX="559.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fitHeight="18.0" fitWidth="24.0" layoutX="232.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <!--            <Image url="@../img/writesome%20Icon.png" />-->
+            </image>
+        </ImageView>
+        <ImageView fitHeight="22.0" fitWidth="24.0" layoutX="482.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true" />
+        <Label layoutX="49.0" layoutY="92.0" text="King Bed">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="129.0" layoutY="92.0" text="2 Guests">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="18.0" fitWidth="14.0" layoutX="228.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/bedicon.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="14.0" fitWidth="22.0" layoutX="306.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/usersicon.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="247.0" layoutY="89.0" text="2 King Bed">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="327.0" layoutY="89.0" text="4 Guests">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="18.0" fitWidth="14.0" layoutX="421.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/bedicon.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="14.0" fitWidth="22.0" layoutX="499.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/usersicon.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="440.0" layoutY="89.0" text="King Bed">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="520.0" layoutY="89.0" text="4 Guests">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="18.0" fitWidth="24.0" layoutX="486.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <!--            <Image url="@../img/writesome%20Icon.png" />-->
+            </image>
+        </ImageView>
+        <ImageView fitHeight="18.0" fitWidth="24.0" layoutX="751.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <!--            <Image url="@../img/writesome%20Icon.png" />-->
+            </image>
+        </ImageView>
+        <AnchorPane layoutX="597.0" layoutY="63.0" prefHeight="467.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: gray; -fx-border-radius: 10;">
+            <children>
+                <JFXTextField fx:id="txtRoomNumber" layoutX="24.0" layoutY="159.0" prefHeight="26.0" prefWidth="150.0" promptText="Room Number" />
+                <JFXTextField fx:id="txtPricePerNight" editable="false" layoutX="27.0" layoutY="241.0" prefHeight="26.0" prefWidth="150.0" promptText="Price Per Night" />
+                <ComboBox fx:id="cmbAvalibility" layoutX="24.0" layoutY="286.0" prefHeight="30.0" prefWidth="150.0" promptText="Avalability" style="-fx-background-color: #F0F0D7;" styleClass="table-row-cell" stylesheets="@../values/style.css" />
+                <ComboBox fx:id="cmbRoomType" layoutX="24.0" layoutY="203.0" prefHeight="30.0" prefWidth="150.0" promptText="Room Type" style="-fx-background-color: #F0F0D7;" styleClass="table-row-cell" stylesheets="@../values/style.css" />
+                <Label layoutX="50.0" layoutY="15.0" text="Room ID :">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblID" layoutX="115.0" layoutY="15.0" text="001">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+            <ImageView fx:id="selectedImg" fitHeight="47.0" fitWidth="61.0" layoutX="27.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-image-100.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="95.0" layoutY="61.0" mnemonicParsing="false" onAction="#btnSElectImageOnAction" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 3;" text="select image " wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <TextArea fx:id="txtImgParth" editable="false" layoutX="21.0" layoutY="115.0" prefHeight="39.0" prefWidth="157.0" style="-fx-background-color: transparent;" wrapText="true" />
+            </children>
+        </AnchorPane>
+        <Button layoutX="626.0" layoutY="398.0" mnemonicParsing="false" onAction="#btnAddRoomOnAction" prefHeight="27.0" prefWidth="142.0" style="-fx-background-color: white; -fx-border-color: blue; -fx-border-radius: 3;" text="Add Room">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <Button layoutX="627.0" layoutY="437.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="27.0" prefWidth="142.0" style="-fx-background-color: white; -fx-border-color: blue; -fx-border-radius: 3;" text="Update">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <Button layoutX="628.0" layoutY="476.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="27.0" prefWidth="142.0" style="-fx-background-color: white; -fx-border-color: blue; -fx-border-radius: 3;" text="Delete">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <Label layoutX="147.0" layoutY="66.0" text="(Single)">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="291.0" layoutY="65.0" text="(Double)">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+        <Label layoutX="538.0" layoutY="64.0" text="(Suite)">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+      <HBox layoutX="12.0" layoutY="159.0" prefHeight="362.0" prefWidth="574.0">
+         <children>
+            <ScrollPane fx:id="scroll" prefHeight="338.0" prefWidth="589.0" style="-fx-background-color: traceparenr;">
+               <content>
+                  <GridPane fx:id="grid1" prefHeight="0.0" prefWidth="9.0">
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+    </children>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+</AnchorPane>
