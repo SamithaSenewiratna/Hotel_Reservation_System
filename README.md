@@ -61,9 +61,6 @@ It offers a clean, layered architecture for managing rooms, customers, reservati
 ### 🛏️ Room Management
 ![Room Management](screenshots/rooms.png)
 
-### 📅 Reservation Management
-![Reservation Management](screenshots/reservation.png)
-
 ### 📈 Reports Dashboard
 ![Reports Dashboard](screenshots/reports.png)
 
